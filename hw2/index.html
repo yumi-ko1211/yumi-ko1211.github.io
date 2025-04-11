@@ -1,0 +1,38 @@
+<canvas id="myCanvas" width="800" height="600"></canvas>
+
+<link href="style.css" rel="stylesheet">
+<script src="script.js"></script>
+let x = 0, y = 0, dx = 10, dy = 10, r = 30; // 定義變數(位置, 速度, 半徑)
+
+document.addEventListener("keydown", keyDownHandler);
+// 按下按鍵時觸發
+
+function keyDownHandler(e)
+
+{
+
+if(e.key == "ArrowRight") x += dx;
+// 1. 更新位置值
+
+...
+
+}
+
+function draw()
+// 更新畫布
+
+{
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+// 1. 清空畫布
+
+drawBall();
+// 2. 據變數繪圖
+
+requestAnimationFrame(draw);
+// 3. 自動呼叫
+
+}
+
+draw();
+// 第一次主動呼叫
